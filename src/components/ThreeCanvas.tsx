@@ -9,6 +9,12 @@ export default function ThreeCanvas({ scrollProgress }: ThreeCanvasProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: 0, y: 0, targetX: 0, targetY: 0 });
+  const scrollProgressRef = useRef(scrollProgress);
+
+  // Keep scroll progress ref updated with latest prop value
+  useEffect(() => {
+    scrollProgressRef.current = scrollProgress;
+  }, [scrollProgress]);
 
   useEffect(() => {
     if (!canvasRef.current || !containerRef.current) return;
@@ -305,18 +311,20 @@ export default function ThreeCanvas({ scrollProgress }: ThreeCanvasProps) {
       let targetRotY = 0;
       let targetScale = 1.15;
 
-      if (scrollProgress < 0.28) {
+      const currentScroll = scrollProgressRef.current;
+
+      if (currentScroll < 0.28) {
         // HERO: Centered, prominent, floating high
-        const p = scrollProgress / 0.28;
+        const p = currentScroll / 0.28;
         targetX = THREE.MathUtils.lerp(0, 1.8, p);
         targetY = THREE.MathUtils.lerp(0.0, -0.4, p);
         targetZ = THREE.MathUtils.lerp(0, -1.5, p);
         targetRotX = THREE.MathUtils.lerp(0.0, 0.4, p);
         targetRotY = THREE.MathUtils.lerp(0.0, 1.2, p);
         targetScale = THREE.MathUtils.lerp(1.15, 0.85, p);
-      } else if (scrollProgress < 0.62) {
+      } else if (currentScroll < 0.62) {
         // COLLECTION & LABS: Shifting left, getting slightly larger, tilted, to sit inside premium console
-        const p = (scrollProgress - 0.28) / (0.62 - 0.28);
+        const p = (currentScroll - 0.28) / (0.62 - 0.28);
         targetX = THREE.MathUtils.lerp(1.8, -1.8, p);
         targetY = THREE.MathUtils.lerp(-0.4, 0.1, p);
         targetZ = THREE.MathUtils.lerp(-1.5, 0.0, p);
@@ -325,7 +333,7 @@ export default function ThreeCanvas({ scrollProgress }: ThreeCanvasProps) {
         targetScale = THREE.MathUtils.lerp(0.85, 1.05, p);
       } else {
         // RESERVATIONS & CHRONOLOGY FOOTER: Moves deep centered in background, tilting backwards beautifully
-        const p = (scrollProgress - 0.62) / (1.0 - 0.62);
+        const p = (currentScroll - 0.62) / (1.0 - 0.62);
         targetX = THREE.MathUtils.lerp(-1.8, 0, p);
         targetY = THREE.MathUtils.lerp(0.1, -1.2, p);
         targetZ = THREE.MathUtils.lerp(0.0, -4.0, p);
@@ -406,7 +414,7 @@ export default function ThreeCanvas({ scrollProgress }: ThreeCanvasProps) {
       if (renderer) renderer.dispose();
       if (scene) scene.clear();
     };
-  }, [scrollProgress]);
+  }, []);
 
   return (
     <div
