@@ -1,6 +1,8 @@
 # ☕ VELORA COFFEE
 > Ultra-Premium Futuristic Café Website — Tokyo // Dubai
 
+![Velora Homepage Mockup](file:///C:/Users/Karthi/.gemini/antigravity/brain/8c7b49dc-626c-4e33-8bba-7dd0e4e689d7/velora_homepage_mockup_1779434957205.png)
+
 [![Built with Vite](https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react)](https://react.dev/)
 [![React Three Fiber](https://img.shields.io/badge/Three.js-r184-black?logo=three.js)](https://threejs.org/)
@@ -72,3 +74,17 @@ This project is fully ready to deploy on **Vercel** with clean URLs and SPA rout
 3. Vercel will automatically configure Vite settings and deploy.
 
 *Made with 🖤 by Velora Culinary Group*
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! Please fork the repository, create a feature branch, and submit a pull request. Follow the coding style guidelines and ensure all tests pass.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📬 Contact
+
+For questions, suggestions, or collaborations, reach out to the Velora Culinary Group at [contact@veloracoffee.com](mailto:contact@veloracoffee.com).

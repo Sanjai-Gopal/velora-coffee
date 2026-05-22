@@ -1,19 +1,20 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Compass, Sparkles, Cpu } from "lucide-react";
 
-// Import core sub-modules
-import ThreeCanvas from "./components/ThreeCanvas";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Customizer from "./components/Customizer";
-import Menu from "./components/Menu";
-import Experiences from "./components/Experiences";
-import Gallery from "./components/Gallery";
-import Testimonials from "./components/Testimonials";
-import Reservations from "./components/Reservations";
-import Footer from "./components/Footer";
-import AudioPlayer from "./components/AudioPlayer";
+
+import Loader from "./components/Loader";
+const ThreeCanvas = lazy(() => import("./components/ThreeCanvas"));
+const Navbar = lazy(() => import("./components/Navbar"));
+const Hero = lazy(() => import("./components/Hero"));
+const Customizer = lazy(() => import("./components/Customizer"));
+const Menu = lazy(() => import("./components/Menu"));
+const Experiences = lazy(() => import("./components/Experiences"));
+const Gallery = lazy(() => import("./components/Gallery"));
+const Testimonials = lazy(() => import("./components/Testimonials"));
+const Reservations = lazy(() => import("./components/Reservations"));
+const Footer = lazy(() => import("./components/Footer"));
+const AudioPlayer = lazy(() => import("./components/AudioPlayer"));
 
 export default function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -155,15 +156,16 @@ export default function App() {
         >
           {/* STATIC BACKGROUND RENDERING CHASSIS */}
           {/* The WebGL Canvas floats behind standard structural content layouts, utilizing CSS absolute boundaries. */}
+          <Suspense fallback={<Loader/>}>
           <ThreeCanvas scrollProgress={scrollProgress} />
-
-          {/* SENSORY ELEMENTS OVERVIEW PANEL */}
+        </Suspense>
+        <Suspense fallback={<Loader/>}>
           <Navbar />
-          
-          {/* Audio synthetics player toggle */}
+        </Suspense>
+        <Suspense fallback={<Loader/>}>
           <AudioPlayer />
-
-          {/* MAIN CHRONICLE DECKS */}
+        </Suspense>
+        <Suspense fallback={<Loader/>}>
           <main className="relative z-20">
             <Hero />
             <Customizer />
@@ -173,9 +175,10 @@ export default function App() {
             <Testimonials />
             <Reservations />
           </main>
-
-          {/* FOOTER */}
+        </Suspense>
+        <Suspense fallback={<Loader/>}>
           <Footer />
+        </Suspense>
         </motion.div>
       )}
     </>
