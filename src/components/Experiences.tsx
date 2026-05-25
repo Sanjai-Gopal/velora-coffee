@@ -125,7 +125,7 @@ export default function Experiences() {
                 {/* Image of the Cybernetic Brew Lab we generated */}
                 <div className="w-full h-56 rounded-2xl overflow-hidden relative border border-white/5 shadow-inner">
                   <img
-                    src="/src/assets/images/brewing_lab_1779428992820.png"
+                    src="/images/brewing_lab_1779428992820.png"
                     alt="Velora Molecular Coffee Extraction Lab"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover grayscale opacity-65 group-hover:grayscale-0 transition-all duration-700"
