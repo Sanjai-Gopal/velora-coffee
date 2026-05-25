@@ -16,7 +16,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "lounge-interior",
     title: "Sovereign Solarium Suite",
     subtitle: "Tokyo Ginza Architectural Design",
-    imgUrl: "/src/assets/images/lounge_interior_1779429015580.png",
+    imgUrl: "/images/lounge_interior_1779429015580.png",
     colSpan: "md:col-span-8",
     ratio: "aspect-[16/9]",
   },
@@ -24,7 +24,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "gilded-pour",
     title: "Atomic Crema Ripple",
     subtitle: "Liquid Gold Infusion",
-    imgUrl: "/src/assets/images/hero_espresso_1779428973163.png",
+    imgUrl: "/images/hero_espresso_1779428973163.png",
     colSpan: "md:col-span-4",
     ratio: "aspect-square md:aspect-auto",
   },
@@ -32,7 +32,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "molecular-extraction",
     title: "The Cryo Extraction Grid",
     subtitle: "Bespoke Pressure Lab",
-    imgUrl: "/src/assets/images/brewing_lab_1779428992820.png",
+    imgUrl: "/images/brewing_lab_1779428992820.png",
     colSpan: "md:col-span-4",
     ratio: "aspect-square md:aspect-auto",
   },
@@ -40,7 +40,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     id: "sensory-alignment",
     title: "The Dubai Marina Pavilion",
     subtitle: "Acoustic Reflection Lounge",
-    imgUrl: "/src/assets/images/lounge_interior_1779429015580.png", // reusing interior with mirror blur
+    imgUrl: "/images/lounge_interior_1779429015580.png", // reusing interior with mirror blur
     colSpan: "md:col-span-8",
     ratio: "aspect-[16/9]",
   }
