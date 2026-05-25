@@ -75,10 +75,10 @@ export default function Footer() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { id: "feed-1", title: "CROP SEED", path: "/src/assets/images/hero_espresso_1779428973163.png" },
-                { id: "feed-2", title: "LAB DIODES", path: "/src/assets/images/brewing_lab_1779428992820.png" },
-                { id: "feed-3", title: "ARCH DECK", path: "/src/assets/images/lounge_interior_1779429015580.png" },
-                { id: "feed-4", title: "GOLD CRUST", path: "/src/assets/images/hero_espresso_1779428973163.png" },
+                { id: "feed-1", title: "CROP SEED", path: "/images/hero_espresso_1779428973163.png" },
+                { id: "feed-2", title: "LAB DIODES", path: "/images/brewing_lab_1779428992820.png" },
+                { id: "feed-3", title: "ARCH DECK", path: "/images/lounge_interior_1779429015580.png" },
+                { id: "feed-4", title: "GOLD CRUST", path: "/images/hero_espresso_1779428973163.png" },
               ].map((feed, fIdx) => (
                 <div
                   key={feed.id}
