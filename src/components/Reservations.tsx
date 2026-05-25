@@ -51,7 +51,7 @@ export default function Reservations() {
             {/* Rendered Lounge Asset Card */}
             <div className="rounded-3xl overflow-hidden relative aspect-video border border-gold-300/10 group shadow-lg">
               <img
-                src="/src/assets/images/lounge_interior_1779429015580.png"
+                src="/images/lounge_interior_1779429015580.png"
                 alt="Velora Luxury Architectural Lounge Tokyo Ginza"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-700"
